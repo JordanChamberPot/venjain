@@ -49,7 +49,7 @@
 				<input type="button" value="목록으로" id="list1" /></td>
 			</tr>
 		</tbody>
-		</table>
+		</table>//변경!
 	<form action="" name="parentForm" method="post">
 		<input type= "hidden" name="cpass" value="" />
 		<input type= "hidden" name="passwd" value="${dto.passwd}" />
