@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Arguments</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+function sum() {
+	var sum = arguments[0] + arguments[1] + arguments[2];
+	document.write(sum);
+}
+
+sum(10,20,30);
+
+
+
+function sum() {
+	var sum = 0;
+	for(var i = 0; i < arguments.length;i++){
+		sum += arguments[i];
+	}
+	document.write(sum);
+}
+	sum(10,20,30);
+</script>
+</head>
+<body>
+
+</body>
+</html>

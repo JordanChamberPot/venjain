@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<title>자기소개</title>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="js/jquery.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  $( function() {
+    $( "#study" ).accordion({
+    	active: false,  widthStyle: "content",collapsible: true
+    	});
+    $( "#introduce" ).accordion({
+    	active: false, collapsible: true
+    	});
+    $( "#vision" ).accordion({
+    	 collapsible: true
+    	});
+  } );
+</script>
+  
+<style type="text/css">
+body{
+	width: 1080px;
+	height: 3200px;
+	margin: auto;
+ 	background-image: url("image/bg.jpg"); 
+ 	background-repeat: no-repeat; 
+ 	background-position: center center; 
+}
+</style>
+<style type="text/css">
+header {
+	height: 720px;
+	margin: auto;
+	color: white;
+}
+
+header h1 {
+	font-size: 80px;
+	display: inline-block;
+	margin: 240px 0 0 360px;
+	padding: 0;	
+}
+
+header p {
+	font-size: 24px;
+	display: inline-block;
+	margin: 0 0 240px 368px;
+	padding: 0;	
+}
+</style>
+<style type="text/css">
+#container {
+/* 	height: 1600px; */
+	margin: auto;
+	padding-top: 1px;
+}
+
+#container #edu{
+	display: inline-block;
+	width: 448px;
+	margin: 368px 608px 0 24px ;
+}
+
+#container #int{
+	display: inline-block;
+	width: 448px;
+	margin: 272px  24px 0 608px;
+}
+
+#container #int h1{
+	color:white;
+}
+
+#container #vis{
+	display: inline-block;
+	width: 448px;
+	margin: 420px 608px 0 24px ;
+}
+
+#container #vis h1{
+	color:white;
+}
+</style>
+<style type="text/css">
+#footer {
+	color:white;
+/* 	height: 80px; */
+	margin: auto;
+	margin-top: 248px;
+	text-align: center;
+}
+</style>
+</head>
+<body>
+<!-- 헤더 -->
+<header class="header-inner">
+	<h1>SHINYSM</h1>
+	<p>앞서 걸어온, 앞으로 가야할 길</p>			
+</header>
+<!-- 헤더 -->
+<!--콘테이너 영역-->
+	<div id="container">
+	<div id="edu">
+		<h1 >EDUCATED</h1>
+		<section id="study" class="rounded">
+			<h2>JAVA</h2>
+				<div>
+					<P>java가 객체 지향 언어임을 이해하고 <br>
+					조건문과 변수를 능수능란하게 조작하며 <br>
+					if문과 함수를 제 몸처럼 다룰 수 있게 되었습니다.</P>
+				</div>
+					<h2>JAVASCRIPT</h2>
+				<div>
+					<p>javasript와 java의 차이점과<br>
+					이점, 단점 등에 능통하게 되었고,<br>
+					이를 웹상에 완벽히! 적용할 수 있습니다.
+				</div>
+					<h2>JQUERY</h2>
+				<div>
+					<p>jquery의 특징을 이해하고<br>
+					animation,effect를 다룰 수 있습니다.</p>
+				</div>
+					<h2>OracleDB</h2>
+				<div>
+					<p>oracle을 베이스로 한 DB환경에 대해<br>
+					배웠으며 일정 부분 활용할 수 있습니다.</p>
+				</div>
+		</section>
+		</div>
+		<div id="int">
+			<h1>INTRODUCE</h1>
+		<section id="introduce" class="rounded">
+				<h2>IDENTITY</h2>
+				<div>
+					<p>이름:김신휘<br>
+					나이:29세<br>
+					성: 남자<br>
+					여친:있음<br></p>
+				</div>
+					<h2>HOBBY</h2>
+				<div>
+					<p>게임하는 걸 좋아합니다.<br>
+					특히 패키지게임을 좋아합니다.<br>
+					재밌게 한 게임은 오픈월드류 게임들입니다.</p> 
+				</div>
+					<h2>CAREER</h2>
+				<div>
+					<p>원래 애니메이션의 배경을 그리는 업무를 했었습니다.<br>
+					경력은 2년 6개월이며 다양한 작풍의 그림을 그렸습니다.<br>
+					프로그래머로서의 경력은 전무합니다.</p>
+				</div>
+		</section>
+		</div>
+		<div id="vis">
+		<h1>VISION</h1>
+		<section id="vision">
+				<h2>미지를 향해</h2>
+			<div>
+					<p>저는 제가 지금까지
+					그림을 그리는게 제 천직이라
+					믿고 살아왔습니다.<br>
+					하지만 이제는 더 넓은 꿈을 가지려 합니다.<br>
+					타인이 만든 세계가 아닌,
+					 어릴적부터 제 마음 속에서 꿈꿔왔던 세계를<br>
+					프로그램과 더불어 세상에 소개하고 싶습니다.</p>
+				</div>
+		</section>
+		</div>
+	</div>
+	<!--//콘테이너 영역-->
+	<!--푸터 영역-->
+	<div id="footer-wrap">
+		<footer id="footer">
+	<hr/>
+			<small>Copyright&copy;2020 김신휘 Shinhwui Kim, All Rights Reserved</small>
+		</footer>
+	</div>
+	<!--//푸터 영역-->
+</body>
+</html>

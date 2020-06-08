@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset = "UTF-8">
+<title> 함수 </title>
+<script>
+	var count = 0;
+	
+	myFnc();
+	
+	function myFnc() {
+		count++;
+		document.write("hello" + count, "<br/>");
+	}
+	
+	myFnc();
+	
+	//theFnc(); //변수로 선언한 경우 먼저 theFnc()이 정의되지 않았기에 실행되지 않음
+				//theFnc()가 실행되지 않아 오류가 발생하여 밑에 코드는 실행되지 않고 중지된다.
+	var theFnc = function() {
+		count++;
+		document.write("bye" + count,"<br/>");
+	}
+	
+	theFnc();
+</script>
+</head>
+<body>
+</body>
+</html>

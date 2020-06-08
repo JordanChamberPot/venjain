@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+<body>
+<script type="text/javascript">
+	var a =true;
+	var b = false;
+	var c= 10>5;
+	var d = Boolean(null);
+	
+	document.write(a,"<br/>");
+	document.write(b,"<br/>");
+	document.write(c,"<br/>");
+	document.write(d,"<br/>");
+	
+	document.write("--------------------<br/>");
+	
+	var num = 100;
+	var str = "자바스크립트";
+	
+	document.write(typeof num,"<br/>");
+	document.write(typeof str,"<br/>");
+	
+	
+	document.write("--------------------<br/>");
+	
+	var num1 = 15;
+	var num2 = 2;
+	var result;
+	result = num1 + num2;
+	document.write(result,"<br/>");
+	result = num1 - num2;
+	document.write(result,"<br/>");
+	result = num1 * num2;
+	document.write(result,"<br/>");
+	result = num1 / num2;
+	document.write(result,"<br/>");
+	result = num1 % num2;
+	document.write(result,"<br/>");
+	
+	
+	document.write("--------------------<br/>");
+	
+	
+	var t1 = "학교종이";
+	var t2 = "땡땡땡";
+	var t3 = 8282;
+	var t4 = "어서 모이자<br/>";
+	var result;
+	
+	result = t1 + t2 + t3 + t4;
+	document.write(result);
+	
+	
+	document.write("--------------------<br/>");
+	
+	
+	var num1 = 10;
+	var num2 = 3;
+	
+	num1 += num2;
+	document.write(num1,"<br/>");
+	num1 -= num2;
+	document.write(num1,"<br/>");
+	num1 *= num2;
+	document.write(num1,"<br/>");
+	num1 %= num2;
+	document.write(num1,"<br/>");
+	
+	
+	document.write("--------------------<br/>");
+	
+	
+	var str = "<table border= '1'>";
+	str += "<tr>";
+	str += "<tr>1</td><td>2</td><td>3</td>";
+	str += "</tr>";
+	str += "</table>";
+	document.write(str+"<br/>");
+	
+	
+	document.write("--------------------<br/>");
+	
+	
+	num1 = 10;
+	num2 = 20;
+	result;
+	
+	num1--;
+	document.write(num1,"<br/>");
+	num1++;
+	document.write(num1,"<br/>");
+	result = num2++;
+	document.write(result,"<br/>");
+	result = ++num2;
+	document.write(result,"<br/>");
+	
+	
+	document.write("--------------------<br/>");
+	
+	
+	a = 10;
+	b = 20;
+	c = 10;
+	var f = "20";
+	result;
+	
+	result = a > b;
+	document.write(result,"<br/>");
+	result = a < b;
+	document.write(result,"<br/>");
+	result = a <= b;
+	document.write(result,"<br/>");
+	result = a == f;
+	document.write(result,"<br/>");
+	result = a != b;
+	document.write(result,"<br/>");
+	result = b === f;
+	document.write(result,"<br/>");
+	
+	
+	document.write("--------------------<br/>");
+	
+	
+	a = 10;
+	b = 20;
+	var m = 30;
+	var n = 40;
+	result;
+	
+	result = a > b || b >= m || m > n;
+	document.write(result, "<br/>");
+	result = a > b || b >= m || m <= n;
+	document.write(result, "<br/>");
+	result = a <= b && b >= m && m <= n;
+	document.write(result, "<br/>");
+	result = a <= b && b <= m && m <= n;
+	document.write(result, "<br/>");
+	result = !(a > b);
+	document.write(result, "<br/>");
+	
+	
+	document.write("--------------------<br/>");
+	
+	
+	a = 10;
+	b = 3;
+	
+	result = a > b ? "javascript" : "hello";
+	document.write(result+"<br/>");
+	
+	
+	document.write("--------------------<br/>");
+	
+	
+	var userHeight = 180;
+	var userWeight = 74;
+	
+	var normalW = (userHeight - 100) * 0.9;
+	document.write(normalW+"<br/>");
+	
+	
+/* 	document.write("--------------------<br/>");
+	
+	
+	var name = prompt("당신의 이름은?", "");
+	var height = prompt("당신의 신장은?", "0");
+	var weight = prompt("당신의 체중은?", "0");
+	
+	normalW = (height - 100) * 0.9;
+	result = weight >= normalW - 5 && weight <= normalW + 5;
+	result = result ? "적정 체중입니다." : "적정 체중이 아닙니다.";
+	document.write(name + "님은 " + result + "<br/>");
+ */	
+	
+	document.write("--------------------<br/>");
+	
+	
+	var price1 = 3000;
+	var price2 = 6000;
+	var price3 = 3000;
+	
+	result = (price1 + price2 + price3);
+	result = result >= 10000 ? (result - 10000)+ "원 초과" : "돈 관리 잘했어요!";
+	document.write(result + "<br/>");
+	
+	
+	document.write("--------------------<br/>");
+	
+	
+	var sale1 = 1200;
+	var sale2 = 1300;
+	var sale3 = 1000;
+	var sale4 = prompt("판매량 입력",0);
+	var num = Number(sale4);
+	var average = (sale1 + sale2 + sale3 + num) / 4;
+	document.write(average + "<br/>");
+	
+	result = sale4 >= average ? "판매량이 평균 이상입니다." : "판매량이 평균 미달입니다.";
+	document.write(result);
+</script>
+</body>
+</html>

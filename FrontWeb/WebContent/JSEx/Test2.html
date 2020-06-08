@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Object</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+<body>
+<script type="text/javascript">
+	var tv = new Object();
+	tv.color = "white";
+	tv.price = 300000;
+	tv.info = function() {
+		document.write("tv 색상: " + this.color,"<br/>");
+		document.write("tv 가격: " + this.price,"<br/>");
+	}
+	var car = {
+			color: "black",
+			price: 5000000,
+			info: function() {
+				document.write("car 색상: " + this.color,"<br/>");
+				document.write("car 가격: " + this.price,"<br/>");
+			}
+	};
+	
+	document.write("<h1>tv 객체 매서드 호출</h1>");
+	tv.info();
+	document.write("<h1>car 객체 매서드 호출</h1>");
+	car.info();
+	
+	
+	document.write("<br/>-------------<br/>");
+	
+	
+	var today = new Date();
+	var nowMonth = today.getMonth(),
+	nowDate = today.getDate(),
+	nowDay = today.getDay();
+	
+	document.write("현재 월: " + nowMonth,"<br/>");
+	document.write("현재 일: " + nowDate,"<br/>");
+	document.write("현재 요일: " + nowDay,"<br/>");
+	
+	var worldCup = new Date(2002,4,31);
+	var theMonth = worldCup.getMonth(),
+	theDate = worldCup.getDate(),
+	theDay = worldCup.getDay();
+	
+	document.write("<h1>월드컵 날짜 정보</h1>");
+	document.write("2002월드컵 몇 월: "+ theMonth,"<br/>");
+	document.write("2002월드컵 몇 일: "+ theDate,"<br/>");
+	document.write("2002월드컵 몇 요일: "+ theDay,"<br/>");
+	
+	
+	document.write("<br/>-------------<br/>");
+	
+	
+	today = new Date();
+	var nowYear = today.getFullYear();
+	
+	var theDate = new Date(nowYear,11,31);
+	var diffDate = theDate.getTime() - today.getTime();
+	
+	var result = Math.ceil(diffDate / (60*1000*60*24));
+	document.write("연말 D-day: " + result + "일 남았습니다." + "<br/>");
+	
+	
+	document.write("<br/>-------------<br/>");
+	
+	
+	var num = 2.1234;
+	
+	var maxNum = Math.max(10, 5, 8, 30),
+		minNum = Math.min(10, 5, 8, 30),
+		roundNum = Math.round(num),
+		floorNum = Math.floor(num),
+		ceilNum = Math.ceil(num),
+		rndNum = Math.random(),
+		piNum = Math.PI;
+		
+		document.write(maxNum,"<br/>");
+		document.write(minNum,"<br/>");
+		document.write(roundNum,"<br/>");
+		document.write(floorNum,"<br/>");
+		document.write(ceilNum,"<br/>");
+		document.write(rndNum,"<br/>");
+		document.write(piNum,"<br/>");
+		
+		
+	document.write("<br/>-------------<br/>");
+	
+	
+	document.write("<h1>컴퓨터 가위, 바위 , 보 맞추기</h1>");
+	
+	var game = prompt("가위,바위,보 중 선택하세요?","가위");
+	var gameNum;
+	switch(game) {
+	case "가위":
+		gameNum = 1;
+		break;
+	case "바위":
+		gameNum = 2;
+		break;
+	case "보":
+		gameNum = 3;
+		break;
+	default: alert("잘못 작성했습니다.");
+		location.reload();
+			
+	}
+	
+	var com = Math.ceil(Math.random()*3);
+	document.write("")
+</script>
+</body>
+</html>
