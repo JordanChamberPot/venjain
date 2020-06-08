@@ -50,17 +50,17 @@ public class ListAction implements CommandAction {
 		
 		int startPage = 1;
 		int endPage = 1;
-		//전체 페이지 수가 블럭보다 크면 블럭보다 작으면
-		if(pdto.getAllPage()<pdto.getPageBlock()) {
-			startPage=1;
-			endPage = pdto.getAllPage();
-		}else {
-			//전체페이지 수가 블럭보다 크면
-			//현재 페이지 블럭에 따라서 바뀜
+//		//전체 페이지 수가 블럭보다 크면 블럭보다 작으면
+//		if(pdto.getAllPage()<pdto.getPageBlock()) {
+//			startPage=1;
+//			endPage = pdto.getAllPage();
+//		}else {
+//			//전체페이지 수가 블럭보다 크면
+//			//현재 페이지 블럭에 따라서 바뀜
 			startPage = (currentPageBlock-1)*pdto.getPageBlock()+1;
 			endPage = currentPageBlock*pdto.getPageBlock()>pdto.getAllPage()?
 						pdto.getAllPage():currentPageBlock*pdto.getPageBlock();
-		}
+//		}
 		
 		pdto.setStartPage(startPage);
 		pdto.setEndPage(endPage);
@@ -71,7 +71,7 @@ public class ListAction implements CommandAction {
 	 	//view에서 사용할 결과 값 저장
 	 	req.setAttribute("list", list);
 	 	//페이지 정보도 저장
-	 	session.setAttribute("pdto", pdto);
+	 	req.setAttribute("pdto", pdto);
 		return "/board2/boardList.jsp";
 	}
 

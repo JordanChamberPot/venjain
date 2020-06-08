@@ -8,4 +8,9 @@ $(function(){
 		document.parentForm.action='list.do';
 		document.parentForm.submit();
 	});
+	
+	$('#list2').click(function(){
+		document.writeForm.action='list.do';
+		document.writeForm.submit();
+	});
 })

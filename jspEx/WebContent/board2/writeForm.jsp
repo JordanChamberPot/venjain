@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c"
-	uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,6 +17,8 @@
 		<input type= "hidden" name="ref" value="${ref}" />
 		<input type= "hidden" name="re_step" value="${re_step}" />
 		<input type= "hidden" name="re_level" value="${re_level}" />
+		<input type="hidden" name="currentPage" value='<c:out value="${pdto.currentPage}"/>'/>
+		<input type="hidden" name="currentPageBlock" value='<c:out value="${pdto.currentPageBlock}"/>' />
 		<table border=1	>
 			<thead class="class01">
 				<tr>
@@ -61,7 +62,7 @@
 			</tr>
 			<tr align="center">
 				<td colspan=2><input type="submit" value="등록" />
-				<input type="button" value="목록으로" id="list1" />
+				<input type="button" value="목록으로" id="list2" />
 			</tr>
 		</tbody>
 		</table>
