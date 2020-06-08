@@ -1,0 +1,21 @@
+table{
+	text-align: center;
+	line-height: 1.5;
+	border-collapse: collapse;
+	margin: auto;
+}
+
+
+.class01 {
+	background-color: #58ACFA;
+}
+
+.class02 {
+	background-color: #E0ECF8;
+}
+
+#head {
+	text-align:center;
+	margin: auto;
+	
+}
