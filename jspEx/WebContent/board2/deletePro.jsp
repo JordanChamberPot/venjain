@@ -8,12 +8,12 @@
 <title>글쓰기 처리</title>
 </head>
 <body>
-	<c:if test="${r>0}">
+<!-- 	<c:if test="${r>0}">
 		<script type="text/javascript">
 			alert("정상적으로 삭제 되었습니다.")
 			location.href="list.do"
-		</script>
-<%-- 		<c:redirect url="list.do"></c:redirect> --%>
-	</c:if>
+		</script>  
+	</c:if>-->
+		<c:redirect url="list.do?currentPage=${pdto.currentPage}&currentPageBlock=${pdto.currentPageBlock}"></c:redirect>
 </body>
 </html>

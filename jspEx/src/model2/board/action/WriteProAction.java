@@ -44,6 +44,12 @@ public class WriteProAction implements CommandAction {
 		dto.setPasswd(req.getParameter("passwd"));
 		dto.setEmail(req.getParameter("email"));
 		dto.setAttachNm(req.getParameter("attachNm"));
+		if(req.getParameter("attachNm")!=null) {
+			String at = req.getParameter("attachNm");
+			System.out.println(at);
+		}else {
+			dto.setAttachNm("");
+		}
 		//DAO를 통해서 받은 데이터 저장하기
 		
 		dao.boardWrite(dto);

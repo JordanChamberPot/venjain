@@ -30,7 +30,6 @@ public class WriteFormAction implements CommandAction {
 		pdto.setCurrentPage(currentPage);
 		pdto.setCurrentPageBlock(currentPageBlock);
 		
-		
 		int num = 0, ref = 0, re_step = 1, re_level = 1;
 		if(req.getParameter("num") != null) {
 			num = Integer.parseInt(req.getParameter("num"));

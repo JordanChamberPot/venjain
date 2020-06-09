@@ -12,7 +12,8 @@
 <script type="text/javascript" src="/jspEx/board2/js/boardScript.js"></script>
 </head>
 <body>
-	<form action="writePro.do" method="post" name="writeForm" onsubmit="return sendData()">
+	<form action="writePro.do" method="post" name="writeForm" 
+		onsubmit="return sendData()" enctype="multipart/form-data">
 		<input type= "hidden" name="num" value="${num}" />
 		<input type= "hidden" name="ref" value="${ref}" />
 		<input type= "hidden" name="re_step" value="${re_step}" />

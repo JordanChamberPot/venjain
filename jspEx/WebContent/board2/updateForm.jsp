@@ -14,7 +14,7 @@
 <script type="text/javascript" src="/jspEx/board2/js/boardScript.js"></script>
 </head>
 <body>
-<form action="updatePro.do" method="post" name="writeForm" onsubmit="return sendData()">
+<form action="updatePro.do" method="post" name="updateForm" onsubmit="return sendData()">
 	<input type="hidden" name="currentPage" value='<c:out value="${pdto.currentPage}"/>'/>
 	<input type="hidden" name="currentPageBlock" value='<c:out value="${pdto.currentPageBlock}"/>' />
 	<table border=1	>
@@ -62,7 +62,7 @@
 			<tr align="center">
 				<td colspan=2>
 				<input type="submit" value="글수정" />
-				<input type="button" value="글목록으로" id="list2" /></td>
+				<input type="button" value="글목록으로" id="list3" /></td>
 			</tr>
 		</tbody>
 		</table>

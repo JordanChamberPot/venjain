@@ -10,7 +10,13 @@ $(function(){
 	});
 	
 	$('#list2').click(function(){
-		document.writeForm.action='list.do';
-		document.writeForm.submit();
+//		document.writeForm.action='list.do';
+//		document.writeForm.submit();
+		javascript:location.href='list.do';
+	});
+	
+	$('#list3').click(function(){
+		document.updateForm.action='list.do';
+		document.updateForm.submit();
 	});
 })
