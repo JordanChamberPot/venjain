@@ -2,29 +2,42 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="dodoChat.entry">
 
-<!--   <select id="allCnt" resultType="int"> 
-      select count(NUM) CNT from board
-  </select>-->
 
-<!--   <select id="getArticles" parameterType="hashmap" resultType="mdto"> -->
-<!-- 	SELECT A.*                                                           -->
-<!--     	FROM (SELECT ROWNUM RR, RMEMTB.*                                -->
-<!--            FROM  (SELECT MEMID ,MEMSEQ ,MEMNAME,  -->
-<!--                          MEMTEL, MEMBIRTH, REGDATE,  -->
-<!--                          MEMEMAIL, MEMGENDER, PASSWD                        -->
-<!--                    FROM MEMTB                                      -->
-<!--                    ORDER BY REGDATE DESC, MEMSEQ ASC ) RMEMTB) A -->
-<!--   <choose> -->
-<!-- 	<when test="memseq!=null">		  		   -->
-<!-- 		WHERE MEMSEQ = #{memseq}           -->
-<!-- 	</when>		  	 -->
-<!--   </choose>	  	 -->
-<!-- </select> -->
+  <select id="getLogin" parameterType="mdto" resultType="String">
+	SELECT MEMSEQ
+        FROM MEMTB                                     
+		WHERE (MEMID = #{memid} AND PASSWD = #{passwd})
+  </select>
+
+ 
+  <select id="getMemberList" parameterType="hashmap" resultType="mdto">
+	SELECT A.*                                                          
+    	FROM (SELECT ROWNUM RR, RMEMTB.*                               
+           FROM  (SELECT MEMID ,MEMSEQ ,MEMNAME, 
+                         MEMTEL, MEMBIRTH, REGDATE, 
+                         MEMEMAIL, MEMGENDER, PASSWD                       
+                   FROM MEMTB                                     
+                   ORDER BY MEMSEQ DESC, REGDATE ASC ) RMEMTB) A
+  <choose>
+	<when test="memseq!=null and memseq!=0">		  		  
+		WHERE MEMSEQ = #{memseq}          
+	</when>
+<!-- 	<otherwise> -->
+<!-- 		<if test="start!=null and start!=0">		  		   -->
+<!-- 			WHERE A.RR BETWEEN #{start} AND #{end}           -->
+<!-- 		</if>		 -->
+<!-- 	</otherwise>		  	 -->
+  </choose>	  	
+</select>
+  <select id="allCnt" resultType="int"> 
+      select count(memseq) allCnt from memtb
+  </select>
+
 
 <insert id="getJoin" parameterType="mdto">
-<selectKey keyProperty="memseq" resultType="int" order="BEFORE">
+  <selectKey keyProperty="memseq" resultType="int" order="BEFORE">
 		SELECT NVL(MAX(MEMSEQ),0)+1 memseq FROM MEMTB
-	</selectKey>
+  </selectKey>
 	INSERT INTO MEMTB(MEMID ,MEMSEQ ,MEMNAME, 
                      MEMTEL, MEMBIRTH, REGDATE, 
                      MEMEMAIL, MEMGENDER, PASSWD)                       
@@ -33,5 +46,7 @@
                       #{mememail}, #{memgender}, #{passwd})
                          
 </insert>
-
+<select id = "idCheck" parameterType="String" resultType="Integer">
+	SELECT COUNT(*) FROM MEMTB WHERE memid = #{userid}
+</select>
 </mapper>
